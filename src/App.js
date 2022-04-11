@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { useTranslation } from 'react-i18next'
+
+import React, { Suspense, useMemo } from 'react'
 
 function App() {
+  const { t } = useTranslation()
+
+  const Component = useMemo(() => {
+    return () => <h1>{t('First Aspect')}</h1>
+  }, [t])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Suspense fallback={() => <p>Loading...</p>}>
+      <Component />
+    </Suspense>
+  )
 }
 
-export default App;
+export default App
