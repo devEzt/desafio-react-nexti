@@ -5,7 +5,6 @@ import React, { Suspense, useMemo } from 'react'
 
 function App() {
   const { t } = useTranslation()
-
   const Component = useMemo(() => {
     return () => <h1>{t('First Aspect')}</h1>
   }, [t])
