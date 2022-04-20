@@ -1,4 +1,3 @@
-import './App.css'
 import { useTranslation } from 'react-i18next'
 
 import React, { Suspense, useMemo } from 'react'
