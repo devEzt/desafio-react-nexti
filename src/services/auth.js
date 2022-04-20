@@ -1,6 +1,6 @@
 import jwtDecode from 'jwt-decode'
 
-import { mutationLogin } from '../api/mutations/login'
+import { mutationLogin } from '../api/Mutation/login'
 
 export function getToken() {
   return window.localStorage.getItem(process.env.REACT_APP_AUTH_TOKEN_KEY)

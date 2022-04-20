@@ -4,10 +4,13 @@ import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 
-import Providers from './providers'
+import { CssBaseline } from '@material-ui/core'
+
+import Providers from './Providers'
 
 ReactDOM.render(
   <Providers>
+    <CssBaseline />
     <App />
   </Providers>,
   document.getElementById('root')
