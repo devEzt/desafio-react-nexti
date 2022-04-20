@@ -6,7 +6,7 @@ import { Form, Formik } from 'formik'
 import * as yup from 'yup'
 
 import {
-  Avatar,
+  // Avatar,
   Button,
   Checkbox,
   createTheme,
@@ -60,7 +60,7 @@ export default function Auth() {
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>{/* <LockOutlinedIcon /> */}</Avatar>
+          {/* <Avatar className={classes.avatar}><LockOutlinedIcon /></Avatar> */}
 
           <Typography component="h1" variant="h5">
             {t('loginPage')}

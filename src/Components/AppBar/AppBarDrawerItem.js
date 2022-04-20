@@ -10,7 +10,7 @@ export const AppBarDrawerItem = () => {
       <ListItemIcon>
         <MailIcon />
       </ListItemIcon>
-      <ListItemText primary="Teste" />
+      <ListItemText primary="Tentativa" />
     </ListItem>
   )
 }

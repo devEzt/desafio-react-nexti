@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": 101,
+      "id": 1,
       "email": "alexandreha.maciel@gmail.com",
       "password": "senha1234",
-      "token": "25fd7fb2-3eca-40a6-bfbf-7c40751a096b"
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTYwNTg1NTAyMCIsIm5hbWUiOiJKZWFuIENhcmxvcyBMb25kZXJvIiwiYXZhdGFyIjoiaHR0cHM6Ly9pLnByYXZhdGFyLmNjLzMwMCIsImp0aSI6IjlhZDAxMTYzLWQxMGMtNDMwYi1hNzFiLWZmZGVmMWRmY2QwZiIsImlhdCI6MTYxNDk5NjI4NCwiZXhwIjoxNjE0OTk5OTU1fQ.Lu31SfdXVmLV_z5eSAjUR4o5MRlcwBASQ5u1KFp--z8"
     }
   ]
 }
