@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "email": "alexandreha.maciel@gmail.com",
+      "password": "senha1234",
+      "token": "25fd7fb2-3eca-40a6-bfbf-7c40751a096b"
+    }
+  ]
+}
