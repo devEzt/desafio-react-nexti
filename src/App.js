@@ -7,6 +7,7 @@ function App() {
   const Component = useMemo(() => {
     return () => <h1>{t('First Aspect')}</h1>
   }, [t])
+
   return (
     <Suspense fallback={() => <p>Loading...</p>}>
       <Component />
