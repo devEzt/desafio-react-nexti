@@ -5,6 +5,17 @@ const resources = {
   'pt-BR': {
     translation: {
       primeiroAspecto: 'First Aspect',
+      loginPage: 'Login',
+      email: 'Email',
+      password: 'Senha',
+      keepData: 'Manter dados',
+      signIn: 'Entrar',
+
+      feedbacks: {
+        emailRequired: 'Email é obrigatório!',
+        passwordRequired: 'Senha é obrigatória!',
+        invalidEmail: 'Email inválido!',
+      },
     },
   },
 }

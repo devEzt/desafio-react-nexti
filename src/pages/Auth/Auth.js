@@ -80,7 +80,7 @@ export default function Auth() {
                   autoComplete="current-password"
                 />
 
-                <FormControlLabel control={<Checkbox value="remember" color="primary" />} label={t('rememberMe')} />
+                <FormControlLabel control={<Checkbox value="remember" color="primary" />} label={t('keepData')} />
 
                 <Button
                   type="submit"
