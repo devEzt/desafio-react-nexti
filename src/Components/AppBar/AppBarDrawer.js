@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Box, Divider, Drawer, List } from '@material-ui/core'
 
-import { AppBarDrawerItem } from './AppBarDrawerItem'
-
-import { AppBarDrawerItemLogout } from './AppBarDrawerItemLogout'
 import { AppBarDrawerProfile } from './AppBarDrawerProfile'
+import { AppBarDrawerToggleLanguage } from './AppBarDrawerToggleLanguage'
+import { AppBarDrawerToggleTheme } from './AppBarDrawerToggleTheme'
+import { AppBarDrawerLogout } from './AppBarDrawerLogout'
 
 export const AppBarDrawer = ({ opened, toggle }) => {
   return (
@@ -15,15 +15,15 @@ export const AppBarDrawer = ({ opened, toggle }) => {
 
         <Divider />
 
-        <Box onClick={toggle} onKeyDown={toggle}>
-          <List>
-            <AppBarDrawerItem />
-          </List>
-        </Box>
+        <List>
+          <AppBarDrawerToggleTheme />
+
+          <AppBarDrawerToggleLanguage />
+        </List>
 
         <Divider />
 
-        <AppBarDrawerItemLogout />
+        <AppBarDrawerLogout />
       </Box>
     </Drawer>
   )
