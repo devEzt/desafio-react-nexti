@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { useTranslation } from 'react-i18next'
-
 import { AppBar } from '../../Components/AppBar'
 import { AdminLayout } from './AdminLayout'
 
