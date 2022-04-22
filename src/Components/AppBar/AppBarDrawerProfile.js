@@ -16,7 +16,7 @@ export const AppBarDrawerProfile = () => {
   return (
     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" marginY={5}>
       <Box marginBottom={2}>
-        <Avatar className={classes.avatar}>{userLogged.name.charAt(0)}</Avatar>
+        <Avatar className={classes.avatar}>AM</Avatar>
       </Box>
 
       <Box fontSize={18} fontWeight="fontWeightBold" marginBottom={4}>
