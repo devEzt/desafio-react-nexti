@@ -31,7 +31,13 @@ export const AdminLayoutMenus = () => {
 
   const countMenus = useMemo(() => {
     if (menus.length) {
-      return 30
+      return menus.reduce((acc, next, idx) => {
+        if (idx === 1) {
+          return acc.subMenus.length + next.subMenus.length
+        }
+
+        return acc + next.subMenus.length
+      })
     }
 
     return 0
@@ -57,7 +63,7 @@ export const AdminLayoutMenus = () => {
               <Box display="flex" justifyContent="space-between" paddingY={1} marginLeft={5}>
                 <Typography>{menu.name}</Typography>
 
-                <Typography>15</Typography>
+                <Typography>{(menus.subMenus || []).length}</Typography>
               </Box>
             }
             children={menu.subMenus.map((subMenu) => (
@@ -67,7 +73,7 @@ export const AdminLayoutMenus = () => {
                   <Box display="flex" justifyContent="space-between" paddingY={1} marginLeft={5}>
                     <Typography>{subMenu.name}</Typography>
 
-                    <Typography>15</Typography>
+                    <Typography>{(menus.subMenus || []).length}</Typography>
                   </Box>
                 }
                 onClick={() => setTaskId(subMenu.id)}
