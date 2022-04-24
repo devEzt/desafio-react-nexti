@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 
 import { Box, Divider } from '@material-ui/core'
 
-import { useQueryTaskboard } from '../../api/queries/taskboard'
+import { useQueryTaskboard } from '../../api/Query/taskboard'
 
 import { AdminProvider } from './AdminContext'
 
@@ -15,7 +15,6 @@ export const AdminLayoutTaskboard = () => {
 
   const { data: taskboard = [], isFetching, refetch } = useQueryTaskboard({ taskId }, { enabled: false })
 
-  // TODO: quando parametro é modificado refetch da querie não é realizado.
   useEffect(() => {
     refetch()
 
