@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import { useTranslation } from 'react-i18next'
 
@@ -18,14 +18,22 @@ export const AdminLayoutMenus = () => {
 
   const classes = stylesAdminLayoutFavorites()
 
-  const { data: menus } = useQueryMenus()
+  const { data: menus = [] } = useQueryMenus()
+
+  const countMenus = useMemo(() => {
+    if (menus.length) {
+      return 30
+    }
+
+    return 0
+  }, [menus])
 
   return (
     <Box>
       <Box marginLeft={5} marginBottom={2} display="flex" justifyContent="space-between">
         <Typography>{t('Menus')}</Typography>
 
-        <Typography>30</Typography>
+        <Typography>{countMenus}</Typography>
       </Box>
 
       <TreeView
