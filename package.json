@@ -19,6 +19,8 @@
     "jwt-decode": "^3.1.2",
     "material-ui-icons": "^1.0.0-beta.36",
     "moment": "^2.29.3",
+    "random-color": "^1.0.1",
+    "random-material-color": "^1.0.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-i18next": "^11.16.7",
