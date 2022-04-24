@@ -29,11 +29,11 @@ const resources = {
       'en-US': 'English',
       'es-ES': 'Spanish',
 
-      feedbacks: {
-        requiredEmail: 'Required email!',
-        requiredPassword: 'Required password!',
-        invalidEmail: 'Invalid email!',
-      },
+      requiredEmail: 'Required email!',
+      requiredPassword: 'Required password!',
+      invalidEmail: 'Invalid email!',
+      noItemsFound: 'No items found!',
+      selectSubtaskMenuBeside: 'Select a subtask from the menu beside.',
     },
   },
   'pt-BR': {
@@ -64,11 +64,11 @@ const resources = {
       'en-US': 'Inglês',
       'es-ES': 'Espanhol',
 
-      feedbacks: {
-        requiredEmail: 'Email é obrigatório!',
-        requiredPassword: 'Senha é obrigatória!',
-        invalidEmail: 'Email inválido!',
-      },
+      requiredEmail: 'Email é obrigatório!',
+      requiredPassword: 'Senha é obrigatória!',
+      invalidEmail: 'Email inválido.',
+      noItemsFound: 'Nenhum item foi encontrado!',
+      selectSubtaskMenuBeside: 'Selecione uma SubTask no Menu ao lado.',
     },
   },
 }
