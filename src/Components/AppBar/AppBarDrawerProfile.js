@@ -1,15 +1,13 @@
-import React, { useContext } from 'react'
+import React from 'react'
 
 import { useTranslation } from 'react-i18next'
 
 import { Avatar, Box, Button } from '@material-ui/core'
 
-import { AuthContext } from '../../Providers/auth'
 import { stylesDrawerAvatar } from './styles'
 
 export const AppBarDrawerProfile = () => {
   const { t } = useTranslation()
-  const { userLogged } = useContext(AuthContext)
 
   const classes = stylesDrawerAvatar()
 
@@ -19,8 +17,8 @@ export const AppBarDrawerProfile = () => {
         <Avatar className={classes.avatar}>AM</Avatar>
       </Box>
 
-      <Box fontSize={18} fontWeight="fontWeightBold" marginBottom={4}>
-        {userLogged.name}
+      <Box fontSize={18} fontWeight="fontWeightBold" marginBottom={6}>
+        Alexandre H. Antunes Maciel
       </Box>
 
       <Box width={1} paddingX={2}>
