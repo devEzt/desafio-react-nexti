@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import { Avatar, Box, Typography } from '@material-ui/core'
 
@@ -11,11 +11,11 @@ import { getColor } from 'random-material-color'
 import { formatDate } from '../../helper/date'
 import { getInitials } from '../../helper/string'
 
-export const AdminLayoutTaskboardItem = ({ date, name, subject, owner, users }) => {
+export const AdminLayoutTaskboardItem = memo(({ date, name, subject, owner, users }) => {
   return (
     <Box display="flex" alignItems="center">
       <Box marginRight={2}>
-        <Avatar alt={name} style={{ backgroundColor: getColor({ shades: ['400'] }) }}>
+        <Avatar alt={name} style={{ color: 'white', backgroundColor: getColor({ shades: ['400'] }) }}>
           {owner}
         </Avatar>
       </Box>
@@ -42,12 +42,12 @@ export const AdminLayoutTaskboardItem = ({ date, name, subject, owner, users }) 
         </Box>
       </Box>
 
-      <Box display="flex" flexDirection="column">
+      <Box display="flex" flexDirection="column" alignItems="flex-end">
         <Box marginBottom={2}>{formatDate(date)}</Box>
 
         <AvatarGroup max={4}>
           {users.map((user) => (
-            <Avatar alt={user} style={{ backgroundColor: getColor({ shades: ['400'] }) }}>
+            <Avatar alt={user} style={{ color: 'white', backgroundColor: getColor({ shades: ['400'] }) }}>
               {getInitials(user)}
             </Avatar>
           ))}
@@ -55,4 +55,4 @@ export const AdminLayoutTaskboardItem = ({ date, name, subject, owner, users }) 
       </Box>
     </Box>
   )
-}
+})

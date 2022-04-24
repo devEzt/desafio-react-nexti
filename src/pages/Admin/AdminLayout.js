@@ -1,11 +1,12 @@
-import React, { useMemo } from 'react'
+import React, { Suspense, useMemo } from 'react'
 
 import { AdminLayoutFilters } from './AdminLayoutFilters'
 import { AdminLayoutUserData } from './AdminLayoutUserData'
 import { AdminLayoutMenus } from './AdminLayoutMenus'
 import { AdminLayoutTaskboard } from './AdminLayoutTaskboard'
+import { AdminLayoutTaskboardLoading } from './AdminLayoutTaskboardLoading'
 
-import { Box, Divider, useTheme } from '@material-ui/core'
+import { Box, CircularProgress, Divider, useTheme } from '@material-ui/core'
 
 export const AdminLayout = () => {
   const theme = useTheme()
@@ -20,15 +21,18 @@ export const AdminLayout = () => {
         <Box marginY={4}>
           <Divider />
         </Box>
-        <AdminLayoutMenus />
+        <Suspense fallback={<CircularProgress />}>
+          <AdminLayoutMenus />
+        </Suspense>
       </Box>
 
       <Box display="flex" flexDirection="column" flex={1} margin={3}>
         <Box marginBottom={5}>
           <AdminLayoutFilters />
         </Box>
-
-        <AdminLayoutTaskboard />
+        <Suspense fallback={<AdminLayoutTaskboardLoading />}>
+          <AdminLayoutTaskboard />
+        </Suspense>
       </Box>
     </Box>
   )
